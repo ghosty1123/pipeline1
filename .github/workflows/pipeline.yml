@@ -24,16 +24,16 @@ jobs:
 
     - name: Build
       run: |
-        cd cicd-pipeline
+        pipeline
         npm run build
 
     - name: Test
       run: |
-        cd cicd-pipeline
+        pipeline
         npm test
 
     - name: Deploy
       run: |
-        cd cicd-pipeline
+        pipeline
         echo "Deploying to production..."
         # Add your actual deployment commands here
