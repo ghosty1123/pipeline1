@@ -19,7 +19,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        cd cicd-pipeline
+        pipeline
         npm install
 
     - name: Build
