@@ -36,4 +36,3 @@ jobs:
       run: |
         cd pipeline1
         echo "Deploying to production..."
-        # Add your actual deployment commands here
