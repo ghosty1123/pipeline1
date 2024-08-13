@@ -19,21 +19,21 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        pipeline
+        cd pipeline
         npm install
 
     - name: Build
       run: |
-        pipeline
+        cd pipeline
         npm run build
 
     - name: Test
       run: |
-        pipeline
+        cd pipeline
         npm test
 
     - name: Deploy
       run: |
-        pipeline
+        cd pipeline
         echo "Deploying to production..."
         # Add your actual deployment commands here
