@@ -1,0 +1,39 @@
+name: cicd-pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: |
+        cd cicd-pipeline
+        npm install
+
+    - name: Build
+      run: |
+        cd cicd-pipeline
+        npm run build
+
+    - name: Test
+      run: |
+        cd cicd-pipeline
+        npm test
+
+    - name: Deploy
+      run: |
+        cd cicd-pipeline
+        echo "Deploying to production..."
+        # Add your actual deployment commands here
